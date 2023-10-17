@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <div class="box" id="heading">
+        <h1 class="headingh1"><%= listName %></h1>
+    </div>
+    <div class="elements box">
+        <% if (locals.items) { %>
+            <% for( let index = 0; index < items.length; index++ ) { %>
+                <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p><%= items[index] %></p></label></div>
+            <% } %>
+        <% } %>
+        <!-- <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p>Hello</p></label></div>
+        <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p>Hello</p></label></div>
+        <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p>Hello</p></label></div>
+        <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p>Hello</p></label></div>
+        <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p>Hello</p></label></div>
+        <div class="element"><input type="checkbox"><label for="packers" class="strikethrough"><p>Hello</p></label></div> -->
+        <form class="element" action="/work" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="Tuesday," october="" 17="">+</button>
+        </form>
+    </div>
+</main>
+    
+<%- include("partials/footer.ejs") %>
